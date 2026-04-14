@@ -1,0 +1,5 @@
+Deepfakes are AI-generated media in which a person’s face, voice, or actions are realistically replaced or manipulated. The main purpose of deepfake technology can be both creative and practical, such as in film production, entertainment, or dubbing. However, it is also used for harmful purposes like misinformation or fraud.
+
+Deepfakes work using advanced machine learning models, especially neural networks. These systems are trained on large datasets of images, videos, or audio to learn how a person looks or sounds. The AI then generates new content that imitates this person in a very realistic way.
+
+One advantage of deepfakes is their potential in media and education. However, a major disadvantage is the risk of spreading fake information and damaging trust, as it becomes harder to distinguish real from fake content.
