@@ -10,17 +10,13 @@
 
 
 <style>
-    .largeText {
-        columns: 100px 3;
-    }
+
 </style>
 
 <body>
-<div class="largeText" id="textC"></div>
+    <div class="largeText" id="textC"></div>
 </body>
 <script>
-
-
 
     function contentToHtml(text) {
         return text
@@ -34,8 +30,6 @@
         document.querySelector("#textC").innerHTML = contentToHtml(e)
 
     }))
-
-
 
 </script>
 

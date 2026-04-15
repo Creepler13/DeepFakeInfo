@@ -1,56 +1,36 @@
-🔧 Grundbegriffe
-	•	Deepfake → Deepfake / KI-Fälschung
-	•	Artificial Intelligence (AI) → Künstliche Intelligenz (KI)
-	•	Machine Learning → Maschinelles Lernen
-	•	Neural Network → Neuronales Netzwerk
-	•	Algorithm → Algorithmus
-	•	Data / Dataset → Daten / Datensatz
+<!DOCTYPE html>
+<html lang="en">
 
-⸻
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
 
-🎥 Bild & Video
-	•	Face swap → Gesichtsaustausch
-	•	Facial expression → Gesichtsausdruck
-	•	Lip sync (lip synchronization) → Lippensynchronisation
-	•	Video manipulation → Videomanipulation
-	•	Image generation → Bilderzeugung
-	•	Realistic rendering → Realistische Darstellung
-	•	Resolution → Auflösung
 
-⸻
+<style>
 
-🔊 Audio & Stimme
-	•	Voice cloning → Stimmenklonen
-	•	Speech synthesis → Sprachsynthese
-	•	Audio manipulation → Audiomanipulation
-	•	Text-to-speech (TTS) → Text-zu-Sprache
-	•	Voice imitation → Stimmenimitation
+</style>
 
-⸻
+<body>
+    <div class="largeText" id="textC"></div>
+</body>
+<script>
 
-⚙️ Technologien
-	•	Generative Adversarial Network (GAN) → Generatives adversariales Netzwerk
-	•	Diffusion model → Diffusionsmodell
-	•	Training data → Trainingsdaten
-	•	Model training → Modelltraining
-	•	Real-time generation → Echtzeit-Generierung
+    function contentToHtml(text) {
+        return text
+            .split('\n\n')
+            .map(paragraph => `<p>${paragraph}</p>`)
+            .join('')
+    }
 
-⸻
+    fetch("./media/vocab.txt").then(e => e.text().then(e => {
 
-⚠️ Risiken & Gesellschaft
-	•	Misinformation → Fehlinformation
-	•	Disinformation → Desinformation
-	•	Fake news → Falschnachrichten
-	•	Manipulation → Manipulation
-	•	Privacy → Privatsphäre
-	•	Identity theft → Identitätsdiebstahl
-	•	Trust → Vertrauen
+        document.querySelector("#textC").innerHTML = contentToHtml(e)
 
-⸻
+    }))
 
-🛡️ Gegenmaßnahmen
-	•	Detection → Erkennung
-	•	Deepfake detection → Deepfake-Erkennung
-	•	Digital watermark → Digitales Wasserzeichen
-	•	Verification → Überprüfung
-	•	Regulation → Regulierung
+</script>
+
+</html>
