@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vocabulary</title>
+	<link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vocabulary</title>
 </head>
 
 
@@ -14,22 +14,22 @@
 </style>
 
 <body>
-    <div class="largeText" id="textC"></div>
+	<div class="largeText" id="textC"></div>
 </body>
 <script>
 
-    function contentToHtml(text) {
-        return text
-            .split('\n\n')
-            .map(paragraph => `<p>${paragraph.replaceAll("\n","<br>")}</p>`)
-            .join('')
-    }
+	function contentToHtml(text) {
+		return text
+			.split('\n\n')
+			.map(paragraph => `<p>${paragraph.replaceAll("\n", "<br>")}</p>`)
+			.join('')
+	}
 
-    fetch("./media/vocab.txt").then(e => e.text().then(e => {
+	fetch("./media/vocab.txt").then(e => e.text().then(e => {
 
-        document.querySelector("#textC").innerHTML = contentToHtml(e)
+		document.querySelector("#textC").innerHTML = contentToHtml(e)
 
-    }))
+	}))
 
 </script>
 
