@@ -21,7 +21,7 @@
     function contentToHtml(text) {
         return text
             .split('\n\n')
-            .map(paragraph => `<p>${paragraph}</p>`)
+            .map(paragraph => `<p>${paragraph.replace("\n","<br>")}</p>`)
             .join('')
     }
 
