@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+
+
+<style>
+    .largeText {
+        columns: 100px 3;
+    }
+</style>
+
+<body>
+<div class="largeText" id="textC"></div>
+</body>
+<script>
+
+
+
+    function contentToHtml(text) {
+        return text
+            .split('\n\n')
+            .map(paragraph => `<p>${paragraph}</p>`)
+            .join('')
+    }
+
+    fetch("./media/text.txt").then(e => e.text().then(e => {
+
+        document.querySelector("#textC").innerHTML = contentToHtml(e)
+
+    }))
+
+
+
+</script>
+
+</html>
