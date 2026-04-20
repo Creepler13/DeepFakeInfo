@@ -1,39 +1,103 @@
 <template>
 
-    <div>
-        <img v-if="$data.currentQuestion == 0" src="../assets/media/quiz/frage10_01.png" />
-        <img v-if="$data.currentQuestion == 1" src="../assets/media/quiz/frage14_01.jpg" />
-        <img v-if="$data.currentQuestion == 2" src="../assets/media/quiz/frage15_02.jpg" />
-        <img v-if="$data.currentQuestion == 3" src="../assets/media/quiz/frage12_01.png" />
-        <img v-if="$data.currentQuestion == 4" src="../assets/media/quiz/frage06_01.jpg" />
-        <img v-if="$data.currentQuestion == 5" src="../assets/media/quiz/frage04_02.jpg" />
-        <img v-if="$data.currentQuestion == 6" src="../assets/media/quiz/frage16_01.jpg" />
-        <img v-if="$data.currentQuestion == 7" src="../assets/media/quiz/frage07_01.jpg" />
-        <img v-if="$data.currentQuestion == 8" src="../assets/media/quiz/frage05_01.jpg" />
-        <img v-if="$data.currentQuestion == 9" src="../assets/media/quiz/frage03_02.jpg" />
+    <v-overlay @click:outside="nextQuestion" v-model="$data.showAnswer" contained class="align-center justify-center">
+        <div @click="nextQuestion">
+            <v-card :color="$data.answer ? 'green' : 'red'">
+                <v-card-item>
+                    <div class="text-title-large mb-1">
+                        {{ $data.answer ? "Correct" : "Wrong" }}
+                    </div>
+                    <div class="text-body">
+                        {{ $data.currentQuestion == $data.questions.length ? "Show Result?" : "Next question?" }}
+                    </div>
+                </v-card-item>
+            </v-card>
+
+        </div>
+    </v-overlay>
+
+    <div v-if="$data.currentQuestion < $data.questions.length">
+        <div>
+            <img v-if="$data.currentQuestion == 0" src="../assets/media/quiz/frage10_01.png" />
+            <img v-if="$data.currentQuestion == 1" src="../assets/media/quiz/frage14_01.jpg" />
+            <img v-if="$data.currentQuestion == 2" src="../assets/media/quiz/frage15_02.jpg" />
+            <img v-if="$data.currentQuestion == 3" src="../assets/media/quiz/frage12_01.png" />
+            <img v-if="$data.currentQuestion == 4" src="../assets/media/quiz/frage06_01.jpg" />
+            <img v-if="$data.currentQuestion == 5" src="../assets/media/quiz/frage04_02.jpg" />
+            <img v-if="$data.currentQuestion == 6" src="../assets/media/quiz/frage16_01.jpg" />
+            <img v-if="$data.currentQuestion == 7" src="../assets/media/quiz/frage07_01.jpg" />
+            <img v-if="$data.currentQuestion == 8" src="../assets/media/quiz/frage05_01.jpg" />
+            <img v-if="$data.currentQuestion == 9" src="../assets/media/quiz/frage03_02.jpg" />
+        </div>
+
+
+        <div class="flex justify-around mt-3">
+            <v-row class="justify-center" size="4">
+                <v-col cols="2">
+                    <v-btn rounded="xs" size="x-large" block @click="checkReal" color="#16c90c">Real</v-btn>
+                </v-col>
+                <v-col cols="2">
+                    <v-btn rounded="xs" size="x-large" block @click="checkFake" color="#e61a0b">Fake</v-btn>
+                </v-col>
+            </v-row>
+        </div>
+
     </div>
-    <div class="flex justify-around mt-3">
-    <div>
-        <button>Real</button>
+    <div v-else>
+
+        <v-card>
+            <v-card-item>
+                <div class="text-title-large mb-1">
+                    You have {{ $data.points }} out of 10 points
+                </div>
+                <div>
+                    <v-btn @click="reset" class="mt-4" color="#877691">
+                        Again?
+                    </v-btn>
+                </div>
+            </v-card-item>
+        </v-card>
+
     </div>
-     <div>
-        <button>Fake</button>
-    </div></div>
 </template>
 
 
 <script lang="ts">
+import { getFileBasedRouteName } from 'vue-router/dist/unplugin/index.cjs';
+
 
 var test = false;
 
 export default {
     data() {
         return {
+            showAnswer: false,
+            answer: false,
             currentQuestion: 0,
             points: 0,
             questions: [
                 true, false, true, true, true, false, true, true, true, false
             ]
+        }
+    },
+
+    methods: {
+        reset() {
+            this.currentQuestion = 0;
+            this.points = 0;
+        },
+        checkFake() {
+            this.answer = this.questions[this.currentQuestion] ? true : false
+            this.showAnswer = true;
+        },
+        checkReal() {
+            this.answer = this.questions[this.currentQuestion] ? false : true
+            this.showAnswer = true;
+        },
+        nextQuestion() {
+            if (this.answer) this.points++;
+            this.showAnswer = false;
+            this.currentQuestion++;
         }
     }
 }
