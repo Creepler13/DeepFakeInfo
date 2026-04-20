@@ -12,7 +12,7 @@ console.log(contentToHtml(text))
 function contentToHtml(text:string) {
 		return text
 			.split('\n\n')
-			.map(paragraph => `<p>${paragraph.replaceAll("\n", "<br>")}</p>`)
+			.map(paragraph => `<p>${paragraph.replaceAll("\n", "<br><br>")}</p>`)
 			.join('')
 	}
 
