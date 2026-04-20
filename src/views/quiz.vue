@@ -1,8 +1,8 @@
 <template>
 
     <div>
-        <image v-if="$data.currentQuestion == 0" src="../assets/media/quiz/monroe.webp" />
-        <image v-if="$data.currentQuestion == 1" src="../assets/media/quiz/frage09_01.jpg" />
+        <img v-if="$data.currentQuestion == 0" src="../assets/media/quiz/monroe.webp" />
+        <img v-if="$data.currentQuestion == 1" src="../assets/media/quiz/frage09_01.jpg" />
 
     </div>
 </template>
