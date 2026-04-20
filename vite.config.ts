@@ -9,7 +9,8 @@ import vueDevTools from "vite-plugin-vue-devtools";
 // https://vite.dev/config/
 export default defineConfig({
   base: "/DeepFakeInfo/",
-  plugins: [vue(), vueDevTools(),],
+  plugins: [vue(), vueDevTools()],
+  assetsInclude:['**/*.txt'],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
