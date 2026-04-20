@@ -1,3 +1,4 @@
+import Quiz from '@/views/quiz.vue'
 import Video from '@/views/video.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -8,6 +9,11 @@ const router = createRouter({
       path: '/video',
       name: "Video",
       component: Video,
+    },
+     {
+      path: '/quiz',
+      name: "Quiz",
+      component: Quiz,
     },
   ],
 })

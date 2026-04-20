@@ -1,0 +1,12 @@
+[
+  {
+    "left": {
+      "image": "./monroe.webp",
+      "isFake": true
+    },
+    "right": {
+      "image": "./monroe.webp",
+      "isFake": false
+    }
+  }
+]
