@@ -63,10 +63,6 @@
 
 
 <script lang="ts">
-import { getFileBasedRouteName } from 'vue-router/dist/unplugin/index.cjs';
-
-
-var test = false;
 
 export default {
     data() {
