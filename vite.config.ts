@@ -4,16 +4,21 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import vueDevTools from "vite-plugin-vue-devtools";
 
+import vuetify from "vite-plugin-vuetify"
+import bundlesize from "vite-plugin-bundlesize";
 
-
-// https://vite.dev/config/
 export default defineConfig({
   base: "/DeepFakeInfo/",
-  plugins: [vue(), vueDevTools()],
-  assetsInclude:['**/*.txt'],
+  plugins: [vue(),
+  vueDevTools(),
+  vuetify({ autoImport: true }),
+  bundlesize()],
+  assetsInclude: ['**/*.txt'],
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
     },
-  }
+  }, build: {
+    sourcemap: "hidden",
+  },
 });

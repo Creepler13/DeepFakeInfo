@@ -1,12 +1,17 @@
 <template>
-<div>
-    <div class="bg-red-400 text-yellow-500">
-        <audio controls  src="../assets/media/audio.wav"></audio>
+    <div>
+            <audio :src="audio" controls></audio>
     </div>
-</div>
 </template>
 
 <script lang="ts">
+import audio from "../assets/media/audio.mp3"
 
-
+export default{
+    data(){
+        return {
+            audio:audio
+        }
+    }
+}
 </script>

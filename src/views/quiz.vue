@@ -1,14 +1,14 @@
 <template>
 
-    <v-overlay @click:outside="nextQuestion" v-model="$data.showAnswer" contained class="align-center justify-center">
+    <v-overlay @click:outside="nextQuestion" v-model="showAnswer" contained class="align-center justify-center">
         <div @click="nextQuestion">
-            <v-card :color="$data.answer ? 'green' : 'red'">
+            <v-card :color="answer ? 'green' : 'red'">
                 <v-card-item>
                     <div class="text-title-large mb-1">
-                        {{ $data.answer ? "Correct" : "Wrong" }}
+                        {{ answer ? "Correct" : "Wrong" }}
                     </div>
                     <div class="text-body">
-                        {{ $data.currentQuestion == $data.questions.length ? "Show Result?" : "Next question?" }}
+                        {{ currentQuestion == questions.length ? "Show Result?" : "Next question?" }}
                     </div>
                 </v-card-item>
             </v-card>
@@ -16,18 +16,18 @@
         </div>
     </v-overlay>
 
-    <div v-if="$data.currentQuestion < $data.questions.length">
+    <div v-if="currentQuestion < questions.length">
         <div>
-            <img v-if="$data.currentQuestion == 0" src="../assets/media/quiz/frage10_01.png" />
-            <img v-if="$data.currentQuestion == 1" src="../assets/media/quiz/frage14_01.jpg" />
-            <img v-if="$data.currentQuestion == 2" src="../assets/media/quiz/frage15_02.jpg" />
-            <img v-if="$data.currentQuestion == 3" src="../assets/media/quiz/frage12_01.png" />
-            <img v-if="$data.currentQuestion == 4" src="../assets/media/quiz/frage06_01.jpg" />
-            <img v-if="$data.currentQuestion == 5" src="../assets/media/quiz/frage04_02.jpg" />
-            <img v-if="$data.currentQuestion == 6" src="../assets/media/quiz/frage16_01.jpg" />
-            <img v-if="$data.currentQuestion == 7" src="../assets/media/quiz/frage07_01.jpg" />
-            <img v-if="$data.currentQuestion == 8" src="../assets/media/quiz/frage05_01.jpg" />
-            <img v-if="$data.currentQuestion == 9" src="../assets/media/quiz/frage03_02.jpg" />
+            <img v-if="currentQuestion == 0" src="../assets/media/quiz/frage10_01.png" />
+            <img v-if="currentQuestion == 1" src="../assets/media/quiz/frage14_01.jpg" />
+            <img v-if="currentQuestion == 2" src="../assets/media/quiz/frage15_02.jpg" />
+            <img v-if="currentQuestion == 3" src="../assets/media/quiz/frage12_01.png" />
+            <img v-if="currentQuestion == 4" src="../assets/media/quiz/frage06_01.jpg" />
+            <img v-if="currentQuestion == 5" src="../assets/media/quiz/frage04_02.jpg" />
+            <img v-if="currentQuestion == 6" src="../assets/media/quiz/frage16_01.jpg" />
+            <img v-if="currentQuestion == 7" src="../assets/media/quiz/frage07_01.jpg" />
+            <img v-if="currentQuestion == 8" src="../assets/media/quiz/frage05_01.jpg" />
+            <img v-if="currentQuestion == 9" src="../assets/media/quiz/frage03_02.jpg" />
         </div>
 
 
@@ -48,7 +48,7 @@
         <v-card>
             <v-card-item>
                 <div class="text-title-large mb-1">
-                    You have {{ $data.points }} out of 10 points
+                    You have {{ points }} out of 10 points
                 </div>
                 <div>
                     <v-btn @click="reset" class="mt-4" color="#877691">

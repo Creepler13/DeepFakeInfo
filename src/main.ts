@@ -5,12 +5,12 @@ import { createPinia } from 'pinia'
 
 import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { VBtn, VCard, VCardItem, VCol, VOverlay, VRow } from 'vuetify/components'
 
 const vuetify = createVuetify({
-  components,
-  directives,
+ components:{
+    VOverlay, VCardItem,VCard,VBtn,VRow,VCol
+ }
 })
 
 import App from './App.vue'

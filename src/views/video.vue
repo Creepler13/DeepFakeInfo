@@ -7,10 +7,4 @@
 </template>
 
 <script lang="ts">
-
-var test = "";
-
-export default {
-  name: "Video"
-};
 </script>
