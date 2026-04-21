@@ -1,9 +1,9 @@
-const Audio = () => import('@/views/audio.vue');
-const More = () => import('@/views/more.vue')
-const Quiz = () => import('@/views/quiz.vue')
-const Text = () => import('@/views/text.vue')
-const Video = () => import('@/views/video.vue')
-const Vocab = () => import('@/views/vocab.vue')
+import Audio from '@/views/audio.vue'
+import More from '@/views/more.vue'
+import Quiz from '@/views/quiz.vue'
+import Text from '@/views/text.vue'
+import Video from '@/views/video.vue'
+import Vocab from '@/views/vocab.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
