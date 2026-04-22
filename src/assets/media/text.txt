@@ -1,18 +1,14 @@
-Deepfakes are AI-generated media in which a person’s face, voice, or actions are realistically replaced or manipulated.
-The main purpose of deepfake technology can be both creative and practical, such as in film production, entertainment,
-or dubbing. However, it is also used for harmful purposes like misinformation or fraud.
+Deepfakes are AI-generated media in which a person’s face, voice, or actions are realistically replaced or manipulated. The main purpose of deepfake technology can be both creative and practical, such as in film production, entertainment, or dubbing. However, it is also used for harmful purposes like misinformation or fraud.
 
-Deepfakes work using advanced machine learning models, especially neural networks. These systems are trained on large
-datasets of images, videos, or audio to learn how a person looks or sounds. The AI then generates new content that
-imitates this person in a very realistic way.
+Deepfakes work using advanced machine learning models, especially neural networks. These systems are trained on large datasets of images, videos, or audio to learn how a person looks or sounds. The AI then generates new content that imitates this person in a very realistic way.
+Deepfakes are constantly improving and becoming more realistic due to more powerful AI models. A common method used is called Generative Adversarial Networks (GANs). In this process, two neural networks work together: one creates fake content, while the other checks whether it looks real. Over time, this competition helps the system produce highly convincing results.
 
-One advantage of deepfakes is their potential in media and education. However, a major disadvantage is the risk of
-spreading fake information and damaging trust, as it becomes harder to distinguish real from fake content.
+Another important area is voice synthesis. Deepfake technology can not only replace faces but also imitate a person’s voice. This can be useful in film production, for example to dub movies into different languages while keeping the original actor’s voice, or in education to recreate historical figures speaking.
 
-As an Example here are two types of Attacks bad actors may use:
+One advantage of deepfakes is their potential in media and education. They can save time and costs in production and create new creative possibilities. However, a major disadvantage is the risk of spreading fake information and damaging trust, as it becomes harder to distinguish real from fake content.
 
-<b>The Cryptocurrency Scam:</b>
-Bad actors leverage a deep fake video of Elon Musk to trick people into investing in a fake cryptocurrency
+At the same time, deepfakes create serious challenges for society and security. They can be used to spread false information by making it appear as if politicians or celebrities said something they never did. This can influence public opinion or even affect elections. In addition, cybercriminals may use deepfake voices for fraud, such as pretending to be someone else in phone calls.
 
-<b>The "Grandparent" Scam:</b>
- Bad actors often leverage social media and other online sources in order to build deep-fake voices or videos to impersonate family members or friends. 
+To reduce these risks, researchers are developing tools to detect deepfakes. These systems use AI to find small inconsistencies in images, videos, or audio files. There are also discussions about laws and regulations to limit misuse.
+
+Another important aspect is media literacy. People need to learn how to question digital content and not immediately trust everything they see or hear online. In the future, it will become even more important to rely on trustworthy sources and critically evaluate information.
