@@ -52,7 +52,7 @@
         <v-card>
             <v-card-item>
                 <div class="text-title-large mb-1">
-                    You have {{ points }} out of 10 points
+                    You have {{ points }} out of {{ questions.length }} points
                 </div>
                 <div>
                     <v-btn @click="reset" class="mt-4" color="#877691">
