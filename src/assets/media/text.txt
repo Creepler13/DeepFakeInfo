@@ -8,3 +8,10 @@ imitates this person in a very realistic way.
 
 One advantage of deepfakes is their potential in media and education. However, a major disadvantage is the risk of
 spreading fake information and damaging trust, as it becomes harder to distinguish real from fake content.
+
+As an Example here are two types of Attacks bad actors may use:
+
+The Cryptocurrency Scam:
+Bad actors leverage a deep fake video of Elon Musk to trick people into investing in a fake cryptocurrency
+The "Grandparent" Scam:
+ Bad actors often leverage social media and other online sources in order to build deep-fake voices or videos to impersonate family members or friends. 
