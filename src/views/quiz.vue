@@ -28,6 +28,10 @@
             <img v-if="currentQuestion == 7" src="../assets/media/quiz/frage07_01.jpg" />
             <img v-if="currentQuestion == 8" src="../assets/media/quiz/frage05_01.jpg" />
             <img v-if="currentQuestion == 9" src="../assets/media/quiz/frage03_02.jpg" />
+            <video v-if="currentQuestion == 10" controls src="../assets/media/quiz/TS female.mp4" />
+            <video v-if="currentQuestion == 11" controls src="../assets/media/quiz/TS-100-Sekunden.mp4" />
+            <video v-if="currentQuestion == 12" controls src="../assets/media/quiz/Baerbock.mp4" />
+            <video v-if="currentQuestion == 13" controls src="../assets/media/quiz/TS-Fake.mp4" />
         </div>
 
 
@@ -72,7 +76,7 @@ export default {
             currentQuestion: 0,
             points: 0,
             questions: [
-                true, false, true, true, true, false, true, true, true, false
+                true, false, true, true, true, false, true, true, true, false,true,false,false,true
             ]
         }
     },
